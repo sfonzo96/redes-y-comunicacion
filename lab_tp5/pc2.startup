@@ -1,0 +1,5 @@
+#Asignacion ipv4 a pc2
+ip address add 172.16.255.20/16 dev eth0
+
+#Asignacion gateway a pc2
+ip route add default via 172.16.0.25

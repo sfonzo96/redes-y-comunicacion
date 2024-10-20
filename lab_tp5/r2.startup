@@ -1,0 +1,8 @@
+#Asignacion de ipv4 a r2 red C
+ip address add 172.16.0.25/16 dev eth0
+
+#Asignacion de ipv4 a r2 red B
+ip address add 10.0.0.255/8 dev eth1
+
+#Routing
+ip route add 192.168.0.0/24 via 10.10.10.10 dev eth1
