@@ -1,0 +1,5 @@
+# Direccion IP
+ip addr add 200.200.200.161/28 dev eth0
+
+# Gateway
+ip route add default via 200.200.200.174

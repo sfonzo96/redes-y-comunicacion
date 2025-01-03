@@ -1,0 +1,10 @@
+# Interfaces ethernet
+
+ip addr add 200.200.200.62/26 dev eth0
+ip addr add 200.200.200.158/27 dev eth1
+ip addr add 200.200.200.206/28 dev eth2
+ip addr add 200.200.200.214/29 dev eth3
+ip addr add 200.200.200.94/27 dev eth4
+ip addr add 200.200.200.174/28 dev eth5
+ip addr add 200.200.200.126/27 dev eth6
+ip addr add 200.200.200.190/28 dev eth7
