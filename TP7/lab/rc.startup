@@ -1,0 +1,39 @@
+# Direcciones IP interfaces
+# Interfaz red c (RC@0)
+ip addr add 11.11.15.252/20 dev eth0
+
+# Interfaz red I (RC@1)
+ip addr add 192.168.50.141/30 dev eth1
+
+# Interfaz red H (RC@2)
+ip addr add 192.168.50.137/30 dev eth2
+
+# Interfaz red L (RC@3)
+ip addr add 192.168.50.149/30 dev eth3
+
+
+# Ruteos inmediatos (1 salto entre routers)
+# Ruteo para alcanzar red A
+ip route add 170.16.128.0/17 via 192.168.50.142 dev eth1
+
+# Ruteo para alcanzar red F
+ip route add 192.168.50.128/30 via 192.168.50.142 dev eth1
+
+# Ruteo para alcanzar red G
+ip route add 192.168.50.132/30 via 192.168.50.138 dev eth2
+
+# Ruteo para alcanzar red D
+ip route add 129.30.192.64/26 via 192.168.50.150 dev eth3
+
+# Ruteo para alcanzar red J
+ip route add 192.168.50.144/30 via 192.168.50.150 dev eth3
+
+# Ruteo para alcanzar red K
+ip route add default via 192.168.50.138 dev eth2
+
+
+# Ruteos no inmediatos (1+ saltos entre routers)
+# Ruteo para alcanzar B
+ip route add 200.3.124.0/26 via 192.168.50.142 dev eth1
+#ip route add 200.3.124.0/26 via 192.168.50.138 dev eth2 # Válido pero comentado para que traceroute muestre una ruta válida
+#ip route add 200.3.124.0/26 via 192.168.50.150 dev eth3 # Válido pero comentado para que traceroute muestre una ruta válida

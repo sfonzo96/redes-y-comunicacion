@@ -1,0 +1,5 @@
+# Direccion IP
+ip addr add 11.11.0.1/20 dev eth0
+
+# Gateway
+ip route add default via 11.11.15.252
